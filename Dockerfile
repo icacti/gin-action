@@ -1,4 +1,4 @@
-FROM registry.cn-hangzhou.aliyuncs.com/godev/golang:1.20 AS build
+FROM registry.cn-hangzhou.aliyuncs.com/cacticloud/golang:1.22 AS build
 
 ADD . /gin-api
 
