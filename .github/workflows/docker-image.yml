@@ -25,4 +25,4 @@ jobs:
         file: ./Dockerfile
         push: true
         tags: |
-          ghcr.io/${{ secrets.GHCR_USER }} /gin-api:latest
+          ghcr.io/icacti/gin-api:latest
