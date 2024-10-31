@@ -13,7 +13,7 @@ ENV GO111MODULE on
 RUN go mod tidy
 RUN go build -o gin-api-server
 
-FROM alpine
+FROM registry.cn-hangzhou.aliyuncs.com/cacticloud/ubuntu
 
 WORKDIR /data/gin-api
 
