@@ -8,7 +8,6 @@ ENV CGO_ENABLED 0
 ENV GOOS linux
 ENV GOARCH amd64
 ENV GOPROXY https://goproxy.cn,direct
-ENV GOPRIVATE github.com
 ENV GO111MODULE on 
 
 RUN go mod tidy
