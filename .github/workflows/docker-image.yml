@@ -24,5 +24,4 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: |
-          ghcr.io/icacti/gin-api:latest
+        tags: ${{ steps.meta.outputs.tags }}
