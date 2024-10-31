@@ -1,13 +1,20 @@
-FROM golang:1.21.13 AS build
+FROM registry.cn-hangzhou.aliyuncs.com/godev/golang:1.20 AS build
 
 ADD . /gin-api
 
 WORKDIR /gin-api
 
+ENV CGO_ENABLED 0
+ENV GOOS linux
+ENV GOARCH amd64
+ENV GOPROXY https://goproxy.cn,direct
+ENV GOPRIVATE github.com
+ENV GO111MODULE on 
+
 RUN go mod tidy
 RUN go build -o gin-api-server
 
-FROM ubuntu:22.04
+FROM alpine
 
 WORKDIR /data/gin-api
 
