@@ -16,7 +16,7 @@ jobs:
       uses: docker/setup-buildx-action@v2
 
     - name: Login to GitHub Container Registry
-      run: echo ${{ secrets.WORKFLOW_TOKEN }} | docker login ghcr.io -u icacti --password-stdin
+      run: echo ${{ secrets.WORKFLOW_TOKEN }} | docker login ghcr.io -u ${{ secrets.DOCKER_USER }}  --password-stdin
 
     - name: Build and push Docker image
       uses: docker/build-push-action@v5
