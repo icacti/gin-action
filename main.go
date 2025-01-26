@@ -10,7 +10,7 @@ func main() {
 
     // 根路由，返回简单的 Hello World 文本
     r.GET("/", func(c *gin.Context) {
-        c.String(http.StatusOK, "Hello World v0.6!")
+        c.String(http.StatusOK, "Hello World v0.7!")
     })
 
     // /ping 路由，返回一个简单的 JSON 响应
